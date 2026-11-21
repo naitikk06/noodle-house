@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noodle House | Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h1 class="logo">NOODLE<span>HOUSE</span></h1>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-heading">
+    <p class="tagline">WE WOULD LOVE TO HEAR FROM YOU</p>
+    <h2>CONTACT US</h2>
+    <p>Have questions? Send us a message.</p>
+</section>
+
+<section class="contact-section">
+
+    <form id="contactForm">
+        <h2>GET IN TOUCH</h2>
+
+        <label>Your Name</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" placeholder="Enter your phone number">
+
+        <label>Your Message</label>
+        <textarea placeholder="Write your message..." required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+        <h2>NOODLE HOUSE</h2>
+        <p>We are here to help you!</p>
+        <p><strong>Email:</strong> hello@noodlehouse.com</p>
+        <p><strong>Business:</strong> Noodle Products</p>
+    </div>
+
+</section>
+
+<footer>
+    <h2>NOODLE HOUSE</h2>
+    <p>Good Food. Great Taste.</p>
+    <p>© 2026 Noodle House</p>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+const selectedProduct = params.get("product");
+
+if (selectedProduct) {
+    document.querySelector("textarea").value =
+        "I am interested in " + selectedProduct;
+}
+</script>
+</body>
+</html>
